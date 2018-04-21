@@ -1,6 +1,4 @@
-import random
-import time
-from random import shuffle
+import random, time
 
 def secret_santa(givers, copy):
 	pairs = {}
@@ -31,11 +29,11 @@ def main():
 		f = input("Enter your friend's name:\t")
 		original.append(f)
 
-	finalList = secret_santa(original, original[:])
+	final_list = secret_santa(original, original[:])
 	print("\n----------------------------------------")
 
-	for giver in finalList:
-		print(giver, "has", finalList[giver], "as their secret santa")
+	for giver in final_list:
+		print(giver, "has", final_list[giver], "as their secret santa")
 
 if __name__ == "__main__":
 	start_time = time.time()
